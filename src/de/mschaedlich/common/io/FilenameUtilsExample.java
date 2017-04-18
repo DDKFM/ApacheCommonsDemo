@@ -2,7 +2,6 @@ package de.mschaedlich.common.io;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
@@ -44,6 +43,7 @@ public class FilenameUtilsExample {
 		
 		try {
 			boolean directoryContainsFile = FileUtils.directoryContains(parentFile, childFile);
+			
 			System.out.println("Die Datei " + childFile.getName() + "befindet sich "
 					+ (directoryContainsFile ? "nicht" : "")
 					+ " im Ordner " + parentFile.getName());

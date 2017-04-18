@@ -2,7 +2,6 @@ package de.mschaedlich.common.io;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Scanner;
 
 import org.apache.commons.io.monitor.FileAlterationListenerAdaptor;
 import org.apache.commons.io.monitor.FileAlterationMonitor;
@@ -11,6 +10,7 @@ import org.apache.commons.io.monitor.FileAlterationObserver;
 public class FileMonitorExample {
 	public static void main(String[] args) {
 		File parentDir = new File("examples");
+		
 
 		FileAlterationObserver observer = new FileAlterationObserver(parentDir);
 		observer.addListener(new FileAlterationListenerAdaptor() {

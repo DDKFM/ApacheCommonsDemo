@@ -5,7 +5,8 @@ import java.io.IOException;
 
 import org.apache.commons.io.FileSystemUtils;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
+
+import com.sun.javafx.scene.traversal.TopMostTraversalEngine;
 
 public class DiskSpace {
 	public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class DiskSpace {
 				System.out.println("[Pfad: " + rootFolder.getPath() + "]");
 				
 				long totalSpace = rootFolder.getTotalSpace();
-				long freeSpace = FileSystemUtils.freeSpaceKb(rootFolder.getPath()) * 1024;
+				long freeSpace = FileSystemUtils.freeSpaceKb(rootFolder.getPath()) * 1000;
 				double percentage = freeSpace / ((double) totalSpace) * 100;
 				
 				System.out.println("\tgesamter Speicher: " + formatFileSize(totalSpace) + ")");

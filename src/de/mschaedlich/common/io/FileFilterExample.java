@@ -1,9 +1,7 @@
 package de.mschaedlich.common.io;
 
 import java.io.File;
-import java.io.FileFilter;
 import java.io.FilenameFilter;
-import java.util.Arrays;
 
 import org.apache.commons.io.filefilter.AndFileFilter;
 import org.apache.commons.io.filefilter.PrefixFileFilter;
@@ -17,15 +15,13 @@ public class FileFilterExample {
 		/*
 		 * Alle Dateinamen anzeigen
 		 * */
-		//String[] fileNames = parentFile.list();
 		
 		/*
 		 * Wildcard-Filter: erkennen * als belebig viele Zeichen und 
 		 * 							 ? als ein beliebiges Zeichen
 		 * */
 		
-		//FilenameFilter filter = new WildcardFileFilter("*.*");
-		//String[] fileNames = parentFile.list(filter);
+		FilenameFilter filter = new WildcardFileFilter("BWL*");
 		
 		/*
 		 * Prefix - und Suffix-Filter
@@ -40,7 +36,7 @@ public class FileFilterExample {
 									);
 		//weitere Filter: NotFileFilter, OrFileFilter,
 		
-		String[] fileNames = parentFile.list(prefixFilter);
+		String[] fileNames = parentFile.list(andFilter);
 		
 		
 		/*
