@@ -27,7 +27,7 @@ public class DiskSpace {
 		}
 	}
 	public static String formatFileSize(long fileSize) {
-		String[] suffix = new String[] {"Byte", "KiB", "MiB", "GiB", "PiB"};
+		String[] suffix = new String[] {"Byte", "KiB", "MiB", "GiB", "TiB", "PiB"};
 		int maxCount = 6;
 		int i = 0;
 		int suffixCount = 0;
