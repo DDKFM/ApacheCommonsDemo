@@ -12,16 +12,13 @@ public class FileFilterExample {
 
 	public static void main(String[] args) {
 		File parentFile = new File("examples");
-		/*
-		 * Alle Dateinamen anzeigen
-		 * */
 		
 		/*
-		 * Wildcard-Filter: erkennet * als belebig viele Zeichen und 
+		 * Wildcard-Filter: erkennt * als belebig viele Zeichen und 
 		 * 							 ? als ein beliebiges Zeichen
 		 * */
 		
-		FilenameFilter filter = new WildcardFileFilter("BWL*");
+		FilenameFilter wildcardFilter = new WildcardFileFilter("*DP*");
 		
 		/*
 		 * Prefix - und Suffix-Filter
@@ -36,7 +33,7 @@ public class FileFilterExample {
 									);
 		//weitere Filter: NotFileFilter, OrFileFilter,
 		
-		String[] fileNames = parentFile.list();
+		String[] fileNames = parentFile.list(andFilter);
 		
 		
 		/*

@@ -9,44 +9,27 @@ import org.apache.commons.io.LineIterator;
 
 public class FilenameUtilsExample {
 
-	private static final File EXAMPLE_FILE = new File("examples" + File.separator + "HalloWelt.txt");
 	public static void main(String[] args) {
 		
-		String fullPath = FilenameUtils.getFullPath( EXAMPLE_FILE.getAbsolutePath());
-		String extension = FilenameUtils.getExtension(EXAMPLE_FILE.getAbsolutePath());
-		String baseName = FilenameUtils.getBaseName(EXAMPLE_FILE.getAbsolutePath());
+		String path = "examples" + File.separator + "HalloWelt.txt";
+		String fullPath = FilenameUtils.getFullPath(path);
+		String extension = FilenameUtils.getExtension(path);
+		String baseName = FilenameUtils.getBaseName(path);
 		
-		System.out.println("Voller Pfad: " + fullPath);
-		System.out.println("Dateiendung: " + extension);
-		System.out.println("Basis: " + baseName);
-		/*
-		 * 
-		 * */
-		/*
-		try {
-			LineIterator lineIterator = FileUtils.lineIterator(EXAMPLE_FILE);
-			System.out.println("Inhalt der Datei: " + EXAMPLE_FILE.getName());
-			
-			while(lineIterator.hasNext()) {
-				System.out.println("\t" + lineIterator.next());
-			}
-			lineIterator.close();
+		System.out.println("File: " + path);
+		System.out.println("Full Path: " + fullPath);
+		System.out.println("Extension: " + extension);
+		System.out.println("Base Name: " + baseName);
 		
-		} catch (IOException e) {
-			System.err.println("Fehler beim Lesen der Datei" + e);
-		}
-		*/
-		/*
-		 * 
-		 * 
-		 * */
+		System.out.println("");
+		
 		File childFile = new File("examples" + File.separator + "HalloWelt.txt");
 		File parentFile = new File("examples");
 		
 		try {
 			boolean directoryContainsFile = FileUtils.directoryContains(parentFile, childFile);
 			
-			System.out.println("Die Datei " + childFile.getName() + "befindet sich "
+			System.out.println("Die Datei " + childFile.getName() + " befindet sich "
 					+ (directoryContainsFile ? "" : "nicht")
 					+ " im Ordner " + parentFile.getName());
 		} catch (IOException e) {

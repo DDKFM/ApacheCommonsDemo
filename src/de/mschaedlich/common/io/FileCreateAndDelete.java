@@ -16,6 +16,7 @@ public class FileCreateAndDelete {
 			
 			File file0 = new File("examples" + File.separator + "BWL.txt");
 			File file1 = new File("examples" + File.separator + "BWL2.txt");
+			
 			FileUtils.copyFile(file0, file1);
 			FileUtils.forceDelete(file0);
 			FileUtils.moveFile(file1, file0);
