@@ -22,6 +22,7 @@ public class FilenameUtilsExample {
 		/*
 		 * 
 		 * */
+		/*
 		try {
 			LineIterator lineIterator = FileUtils.lineIterator(EXAMPLE_FILE);
 			System.out.println("Inhalt der Datei: " + EXAMPLE_FILE.getName());
@@ -34,6 +35,7 @@ public class FilenameUtilsExample {
 		} catch (IOException e) {
 			System.err.println("Fehler beim Lesen der Datei" + e);
 		}
+		*/
 		/*
 		 * 
 		 * 
@@ -45,7 +47,7 @@ public class FilenameUtilsExample {
 			boolean directoryContainsFile = FileUtils.directoryContains(parentFile, childFile);
 			
 			System.out.println("Die Datei " + childFile.getName() + "befindet sich "
-					+ (directoryContainsFile ? "nicht" : "")
+					+ (directoryContainsFile ? "" : "nicht")
 					+ " im Ordner " + parentFile.getName());
 		} catch (IOException e) {
 			System.err.println("Fehler beim Überprüfen von directoryContains");

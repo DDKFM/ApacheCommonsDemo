@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 
-public class CheckSum {
+public class FileCreateAndDelete {
 	public static void main(String[] args) throws IOException {
 		File examplesDirectory = new File("examples");
 		

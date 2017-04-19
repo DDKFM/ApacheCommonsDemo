@@ -17,7 +17,7 @@ public class FileFilterExample {
 		 * */
 		
 		/*
-		 * Wildcard-Filter: erkennen * als belebig viele Zeichen und 
+		 * Wildcard-Filter: erkennet * als belebig viele Zeichen und 
 		 * 							 ? als ein beliebiges Zeichen
 		 * */
 		
@@ -36,7 +36,7 @@ public class FileFilterExample {
 									);
 		//weitere Filter: NotFileFilter, OrFileFilter,
 		
-		String[] fileNames = parentFile.list(andFilter);
+		String[] fileNames = parentFile.list();
 		
 		
 		/*
